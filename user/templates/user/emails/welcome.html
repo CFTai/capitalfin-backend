@@ -1,0 +1,41 @@
+{% load i18n %}
+{% autoescape off %}
+
+{% blocktrans %}
+恭喜您成功注册{{ site }}账户. 欢迎您的加入.
+{% endblocktrans %}
+
+{% trans "请登录以下网站了解更多信息：" %}
+{{ url }}
+
+{% blocktrans %}{{ site }} 团队{% endblocktrans %}
+
+{% blocktrans %}
+Congratulations on successfully registering for your account and a very warm welcome to {{ site }}.
+{% endblocktrans %}
+
+{% trans "Please login to the following site to learn more:" %}
+{{ url }}
+
+{% blocktrans %}The {{ site }} team{% endblocktrans %}
+
+{% blocktrans %}
+친애하는 {{ site }} 회원 여러분, 회원 가입이 성공적으로 완료되어 축하드립니다. {{ site }}에 가입하신 것을 진심으로 환영합니다.
+{% endblocktrans %}
+
+{% trans "더 자세한 정보를 확인하려면 다음 사이트에 로그인해주세요:" %}
+{{ url }}
+
+{% blocktrans %}{{ site }} 팀 일동{% endblocktrans %}
+
+{% blocktrans %}
+親愛なる{{ site }}のメンバーの皆様へ
+アカウントの登録が無事に完了し、{{ site }}への熱烈な歓迎を申し上げます。
+{% endblocktrans %}
+
+{% trans "詳細については、以下のサイトにログインしてください" %}
+{{ url }}
+
+{% blocktrans %}{{ site }}チームより{% endblocktrans %}
+
+{% endautoescape %}

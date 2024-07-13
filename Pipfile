@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+boto3 = "*"
+celery = "*"
+django = "*"
+django-cors-headers = "*"
+django-celery-results = "*"
+django-filter = "*"
+django-storages = "*"
+djangorestframework = "*"
+djangorestframework-simplejwt = "*"
+drf-yasg = "*"
+mysqlclient = "*"
+python-decouple = "*"
+django-celery-beat = "*"
+
+[dev-packages]
+black = "*"
+coverage = "*"
+
+[requires]
+python_version = "3.10"

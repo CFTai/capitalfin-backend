@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  monolithic_api:
+    image: ${IMAGE_TAG}
+    privileged: true
+    ports:
+      - "8000:8000"
+    command: python manage.py runserver 0.0.0.0:8000
+    networks:
+      - capitalfin_network
+    env_file:
+      - service.env
+    restart: unless-stopped
+
+  monolithic_celery:
+    image: ${IMAGE_TAG}
+    privileged: true
+    command: celery -A monolithic_api worker -B -E -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+    networks:
+      - capitalfin_network
+    env_file:
+      - service.env
+    restart: unless-stopped
+
+networks:
+  capitalfin_network:
+    external: true
